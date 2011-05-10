@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Apollo</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <title>The Rent Book | <%= @title %></title>
+ 
+  <%= render 'layouts/stylesheets' %>
   <%= csrf_meta_tag %>
+  <%= javascript_include_tag :all %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('HTML').addClass('JS');
+
+	$("#tabs").tabs();
+
+	//used to give all tabs the same height
+	var maxHeight=0;
+	$("#tabs div").each(function(){
+		var myDiv=$(this);
+		var isHidden=false;
+		if(myDiv.hasClass("ui-tabs-hide")){
+			isHidden=true;
+			myDiv.removeClass("ui-tabs-hide");
+		}
+		if((myHeight=myDiv.height())>maxHeight){
+			maxHeight=myHeight;	
+		}else{
+			myDiv.height(maxHeight);	
+		}
+		if(isHidden){
+			myDiv.addClass("ui-tabs-hide");
+		}
+	});
+
+	$("#slide").cycle({
+		fx: 		'scrollDown',
+		timeout: 	'4000'
+	});
+});
+</script>
+  
 </head>
-<body>
+<body id="home">
+	
+<!-- ****************************** header ****************** -->
+
+<%= render 'layouts/header' %>
+	
+<!-- ****************************** content ***************** -->
 
 <%= yield %>
+	
+<!-- ###################### footer ##################### -->
+
+<%= render 'layouts/footer' %>				
+
 
 </body>
 </html>

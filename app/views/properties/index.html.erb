@@ -1,0 +1,78 @@
+<!-- Alternative Content Box Start -->
+     <div class="contentcontainer">
+        <div class="headings altheading">
+            <h2>Current Properties</h2><br />
+        </div>
+        <div class="contentbox">
+        	<table width="100%">
+            	<thead>
+                	<tr>
+                    	<th>Address</th>
+					    <!--<th>Address2</th>
+					    <th>Address3</th>
+					    <th>Address4</th> -->
+					    <th>Status</th>
+					    
+					    <th>Start date</th>
+					    
+					    <!-- <th>End date</th>
+					    
+					    <th>Payment type</th>
+					    <th>Property</th>
+					    <th>Image url</th>
+					    <th>Price</th>
+					    <th>Description</th>
+					    <th></th>
+					    <th></th>
+					    <th></th> -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr>
+						<% @properties.each do |property| %>
+						  <tr>
+						    <td><%= property.address1 %></td>
+						    <td><%= property.status %></td>
+						    <td><%= property.start_date %></td>
+						    <td><%= link_to 'Show', property %> | <%= link_to 'Edit', edit_property_path(property) %> |  <%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %></td>
+						  </tr>
+						<% end %>
+                </tbody>
+            </table>
+           <div class="extrabottom">
+            <!-- <ul>
+                	<li><%= image_tag("../admin_images/icons/icon_edit.png") %> Edit</li>
+                    <li><%= image_tag("../admin_images/icons/icon_approve.png") %> Approve</li>
+                    <li><%= image_tag("../admin_images/icons/icon_unapprove.png") %> Unapprove</li>
+                    <li><%= image_tag("../admin_images/icons/icon_delete.png") %> Remove</li>
+                </ul> -->
+                <div class="bulkactions"> 
+                	
+                    	<%= link_to 'New Property', new_property_path %>
+                </div>
+            </div>
+            <!-- <ul class="pagination">
+            	<li class="text">Previous</li>
+                <li class="page"><a href="#" title="">1</a></li>
+                <li><a href="#" title="">2</a></li>
+                <li><a href="#" title="">3</a></li>
+                <li><a href="#" title="">4</a></li>
+                <li class="text"><a href="#" title="">Next</a></li>
+            </ul>-->
+            <div style="clear: both;"></div>
+			
+		
+        </div>
+
+
+        
+    </div>
+    <!-- Alternative Content Box End -->
+
+
+
+
+<br />
+
+

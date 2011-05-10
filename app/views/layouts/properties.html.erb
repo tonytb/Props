@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= @title %></title>
+<%= stylesheet_link_tag 'layout', :type => 'text/css', :media => 'all' %>
+<%= stylesheet_link_tag 'wysiwyg', :type => 'text/css', :media => 'all' %>
+<%= stylesheet_link_tag 'themes/styles', :type => 'text/css', :media => 'all' %>
+
+<%= javascript_include_tag :all %>
+
+<%= csrf_meta_tag %>
+</head>
+
+<body id="homepage">
+	<div id="header">
+    	<%= image_tag("../admin_images/cp_logo.png", :alt => "Control Panel") %>
+    	<div id="searcharea">
+            
+            <input type="text" class="searchbox" value="Jump to property or tenant..." onclick="if (this.value =='Jump to property or tenant...'){this.value=''}"/>
+            <input type="submit" value="Search" class="searchbtn" />
+        </div>
+    </div>
+        
+    <!-- Top Breadcrumb Start -->
+    <div id="breadcrumb">
+    	<ul>	
+        	<li><%= image_tag("../admin_images/icons/icon_breadcrumb.png", :alt => "Path") %></li>
+        	<li><strong>Location:</strong></li>
+            <li><a href="#" title="">Sub Section</a></li>
+            <li>/</li>
+            <li class="current">Control Panel</li>
+        </ul>
+    </div>
+    <!-- Top Breadcrumb End -->
+     
+    <!-- Right Side/Main Content Start -->
+    <div id="rightside">
+    
+        
+        
+     <%= yield %>
+        
+       
+        <div id="footer">
+        	&copy; Copyright 2011 The Rent Book
+        </div> 
+          
+    </div>
+    <!-- Right Side/Main Content End -->
+    
+        <!-- Left Dark Bar Start -->
+    <div id="leftside">
+    	<div class="user">
+        	<%= image_tag("../admin_images/avatar.png", :width => "44", :height => "44", :class => "hovering",  :alt => "Avatar") %>
+            <p>Logged in as:</p>
+            <p class="username">Administrator</p>
+            <p class="userbtn"><a href="#" title="">Profile</a></p>
+            <p class="userbtn"><a href="#" title="">Log out</a></p>
+        </div>
+        <div class="notifications">
+        	<p class="notifycount"><a href="" title="" class="notifypop">10</a></p>
+            <p><a href="" title="" class="notifypop">New Notifications</a></p>
+            <p class="smltxt">(Click to open notifications)</p>
+        </div>
+        
+        <ul id="nav">
+        	<li>
+                <ul class="navigation">
+                    <li class="heading selected">Current Section</li>
+                  <li><a href="#" title="">Section link here</a></li>
+                    <li><a href="#" title="">Section link here</a></li>
+                    <li><a href="#" title="">Section link here</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed heading">Section Heading</a>
+                 <ul class="navigation">
+                    <li><a href="#" title="">Section link here</a></li>
+                    <li><a href="#" title="">Section link here</a></li>
+                    <li><a href="#" title="">Section link here</a></li>
+                </ul>
+            </li>
+            <li><a class="expanded heading">Section Heading</a>
+                <ul class="navigation">
+                    <li><a href="#" title="" class="likelogin">Section link here</a></li>
+                    <li><a href="#" title="">Section link here</a></li>
+                    <li><a href="#" title="">Section link here</a></li>
+                </ul>
+            </li>            
+        </ul>
+    </div>
+    <!-- Left Dark Bar End --> 
+    
+    <!-- Notifications Box/Pop-Up Start --> 
+    <div id="notificationsbox">
+        <h4>Notifications</h4>
+        <ul>
+            <li>
+            	<a href="#" title=""><img src="../admin_images/icons/icon_square_close.png" alt="Close" class="closenot" /></a>
+            	<h5><a href="#" title="">New member registration</a></h5>
+                <p>Admin eve joined on 18.12.2010</p>
+            </li>
+            <li>
+            	<a href="#" title=""><img src="../admin_images/icons/icon_square_close.png" alt="Close" class="closenot" /></a>
+            	<h5><a href="#" title="">New member registration</a></h5>
+                <p>Jackson Michael joined on 16.12.2010</p>
+            </li>
+            <li>
+            	<a href="#" title=""><img src="../admin_images/icons/icon_square_close.png" alt="Close" class="closenot" /></a>
+                <h5><a href="#" title="">New blog post created</a></h5>
+                <p>New post created on 15.12.2010</p>
+            </li>
+            <li>
+            	<a href="#" title=""><img src="../admin_images/icons/icon_square_close.png" alt="Close" class="closenot" /></a>
+            	<h5><a href="#" title="">New group created</a></h5>
+                <p>“Web Design” group created on 12.12.2010</p>
+            </li>
+            <li>
+            	<a href="#" title=""><img src="../admin_images/icons/icon_square_close.png" alt="Close" class="closenot" /></a>
+            	<h5><a href="#" title="">1 new private message</a></h5>
+                <p>New message from Joe sent on 21.11.2010</p>
+            </li>
+            <li>
+            	<a href="#" title=""><img src="../admin_images/icons/icon_square_close.png" alt="Close" class="closenot" /></a>
+            	<h5><a href="#" title="">New member registration</a></h5>
+                <p>Graham joined on 20.11.2010</p>
+            </li>
+        </ul>
+        <p class="loadmore"><a href="#" title="">Load more notifications</a></p>
+    </div>
+    <!-- Notifications Box/Pop-Up End --> 
+    
+  
+    
+    <!--[if IE 6]>
+    <script type='text/javascript' src='scripts/png_fix.js'></script>
+    <script type='text/javascript'>
+      DD_belatedPNG.fix('img, .notifycount, .selected');
+    </script>
+    <![endif]--> 
+</body>
+</html>

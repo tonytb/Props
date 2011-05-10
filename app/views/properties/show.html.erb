@@ -1,0 +1,94 @@
+<p id="status success"><%= notice %></p>
+
+   <!-- Alternative Content Box Start -->
+     <div class="contentcontainer">
+        <div class="headings altheading">
+            <h2>Display Property</h2>
+        </div>
+        <div class="contentbox">
+        	<table width="100%">
+            	<thead>
+                	<tr>
+                    	<th>Address</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>												
+					</tr>
+                </thead>
+                <tbody>
+                	<tr>
+                    	<td><%= @property.address1 %></td>
+                        <td><%= @property.address2 %></td>
+						<td><%= @property.address3 %></td>
+						<td><%= @property.address4 %></td>
+				</tbody>
+
+<br />
+
+				<thead>
+                	<tr>
+                    	<th>Status</th>
+						<th>Start Date</th>
+						<th>End Date</th>
+						<th>Number of Occupants</th>
+						<th></th>												
+					</tr>
+                </thead>
+
+				<tbody>
+                	<tr>
+                    	<td><%= @property.status %></td>
+                        <td><%= @property.start_date %></td>
+						<td><%= @property.end_date %></td>
+						<td><%= @property.number_of_occupants %></td>
+				</tbody>
+
+				<thead>
+                	<tr>
+                    	<th>Payment Type</th>
+						<th>Property ID</th>
+						<th>Monthly Rent</th>
+						<th></th>
+						<th></th>												
+					</tr>
+                </thead>
+
+				<tbody>
+                	<tr>
+                    	<td><%= @property.payment_type %></td>
+                        <td><%= @property.property_id %></td>
+						<td><%= number_to_currency(@property.price) %></td>
+				</tbody>
+
+				<thead>
+					<% unless @property.description.empty? %>
+                	<tr>
+                    	<th>Description</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>												
+					</tr>
+					
+                </thead>
+
+				<tbody>
+                	<tr>
+                    	<td><%= @property.description %></td>
+					</tr>
+                </tbody>
+					<% end %>
+            </table>
+
+			<div class="bulkactions"> 
+            	
+                	<%= link_to 'Edit this property', edit_property_path(@property) %> | <%= link_to 'Return to property listing', properties_path %>
+            </div>
+            
+            <div style="clear: both;"></div>
+        </div>
+        
+    </div>
+  
+

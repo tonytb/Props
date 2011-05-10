@@ -1,0 +1,127 @@
+
+<% @properties.each do |property| %>
+  <tr>
+    <td><%= property.address1 %></td>
+    <td><%= property.address2 %></td>
+    <td><%= property.address3 %></td>
+    <td><%= property.address4 %></td>
+    <td><%= property.status %></td>
+    <td><%= property.start_date %></td>
+    <td><%= property.end_date %></td>
+    <td><%= property.number_of_occupants %></td>
+    <td><%= property.payment_type %></td>
+    <td><%= property.property_id %></td>
+    <td><%= property.image_url %></td>
+    <td><%= property.price %></td>
+    <td><%= property.description %></td>
+    <td><%= link_to 'Show', property %></td>
+    <td><%= link_to 'Edit', edit_property_path(property) %></td>
+    <td><%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+#####################################################
+
+</tr>
+<tr class="alt">
+	<td>Content Here</td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
+    <td>
+    	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_edit.png") %></a>
+    	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_approve.png") %></a>
+        <a href="#" title=""><%= image_tag("../admin_images/icons/icon_unapprove.png") %></a>
+        <a href="#" title=""><%= image_tag("../admin_images/icons/icon_delete.png") %></a>
+    </td>
+    <td><input type="checkbox" value="" name="checkall" /></td>
+</tr>
+
+	<tr>
+    	<td>Content Here</td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
+        <td>
+        	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_edit.png") %></a>
+        	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_approve.png") %></a>
+            <a href="#" title=""><%= image_tag("../admin_images/icons/icon_unapprove.png") %></a>
+            <a href="#" title=""><%= image_tag("../admin_images/icons/icon_delete.png") %></a>
+        </td>
+        <td><input type="checkbox" value="" name="checkall" /></td>
+    </tr>
+
+<tr>
+	<td>Content Here</td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
+    <td>
+    	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_edit.png") %></a>
+    	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_approve.png") %></a>
+        <a href="#" title=""><%= image_tag("../admin_images/icons/icon_unapprove.png") %></a>
+        <a href="#" title=""><%= image_tag("../admin_images/icons/icon_delete.png") %></a>
+    </td>
+    <td><input type="checkbox" value="" name="checkall" /></td>
+</tr>
+ <tr class="alt">
+	<td>Content Here</td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.</td>
+    <td>
+    	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_edit.png") %></a>
+    	<a href="#" title=""><%= image_tag("../admin_images/icons/icon_approve.png") %></a>
+        <a href="#" title=""><%= image_tag("../admin_images/icons/icon_unapprove.png") %></a>
+        <a href="#" title=""><%= image_tag("../admin_images/icons/icon_delete.png") %></a>
+    </td>
+    <td><input type="checkbox" value="" name="checkall" /></td
+</tr>
+
+
+
+   <div class="extrabottom">
+    	<ul>
+        	<li><%= image_tag("../admin_images/icons/icon_edit.png") %> Edit</li>
+            <li><%= image_tag("../admin_images/icons/icon_approve.png") %> Approve</li>
+            <li><%= image_tag("../admin_images/icons/icon_unapprove.png") %> Unapprove</li>
+            <li><%= image_tag("../admin_images/icons/icon_delete.png") %> Remove</li>
+        </ul>
+        <div class="bulkactions">
+        	<select>
+            	<option>Select bulk action...</option>
+            </select>
+            <input type="submit" value="Apply" class="btn" />
+        </div>
+    </div>
+    <ul class="pagination">
+    	<li class="text">Previous</li>
+        <li class="page"><a href="#" title="">1</a></li>
+        <li><a href="#" title="">2</a></li>
+        <li><a href="#" title="">3</a></li>
+        <li><a href="#" title="">4</a></li>
+        <li class="text"><a href="#" title="">Next</a></li>
+    </ul>
+    <div style="clear: both;"></div>
+</div>
+
+</div>
+
+
+
+<div class="extrabottom">
+	<ul>
+    	<li><%= image_tag("../admin_images/icons/icon_edit.png") %> Edit</li>
+        <li><%= image_tag("../admin_images/icons/icon_approve.png") %> Approve</li>
+        <li><%= image_tag("../admin_images/icons/icon_unapprove.png") %> Unapprove</li>
+        <li><%= image_tag("../admin_images/icons/icon_delete.png") %> Remove</li>
+    </ul>
+    <div class="bulkactions">
+    	<select>
+        	<option>Select bulk action...</option>
+        </select>
+        <input type="submit" value="Apply" class="btn" />
+    </div>
+</div>
+<ul class="pagination">
+	<li class="text">Previous</li>
+    <li class="page"><a href="#" title="">1</a></li>
+    <li><a href="#" title="">2</a></li>
+    <li><a href="#" title="">3</a></li>
+    <li><a href="#" title="">4</a></li>
+    <li class="text"><a href="#" title="">Next</a></li>
+</ul>
