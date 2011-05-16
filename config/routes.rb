@@ -1,6 +1,8 @@
 Apollo::Application.routes.draw do
   
 
+  resources :tenants
+
   resources :properties
 
   match '/about', :to => 'pages#about'
@@ -8,6 +10,12 @@ Apollo::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   
   match '/tour', :to => 'pages#tour'
+  
+  match '/new', :to => 'properties#new'
+  
+  match '/index', :to => 'properties#index' 
+  
+  match '/destroy', :to => 'properties#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Property:</b>
+  <%= @tenant.property_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @tenant.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @tenant.last_name %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @tenant.email_address %>
+</p>
+
+<p>
+  <b>Contact number:</b>
+  <%= @tenant.contact_number %>
+</p>
+
+<p>
+  <b>Move in date:</b>
+  <%= @tenant.move_in_date %>
+</p>
+
+<p>
+  <b>Move out date:</b>
+  <%= @tenant.move_out_date %>
+</p>
+
+<p>
+  <b>Number of tenants:</b>
+  <%= @tenant.number_of_tenants %>
+</p>
+
+
+<%= link_to 'Edit', edit_tenant_path(@tenant) %> |
+<%= link_to 'Back', tenants_path %>

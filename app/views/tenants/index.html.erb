@@ -1,0 +1,38 @@
+<h1>Listing tenants</h1>
+
+<table>
+  <tr>
+    <th><%= property.each do |property| %></th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email address</th>
+    <th>Contact number</th>
+    <th>Move in date</th>
+    <th>Move out date</th>
+    <th>Number of tenants</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% end %>
+
+<% @tenants.each do |tenant| %>
+  <tr>
+    <td><%= tenant.property_id %></td>
+    <td><%= tenant.first_name %></td>
+    <td><%= tenant.last_name %></td>
+    <td><%= tenant.email_address %></td>
+    <td><%= tenant.contact_number %></td>
+    <td><%= tenant.move_in_date %></td>
+    <td><%= tenant.move_out_date %></td>
+    <td><%= tenant.number_of_tenants %></td>
+    <td><%= link_to 'Show', tenant %></td>
+    <td><%= link_to 'Edit', edit_tenant_path(tenant) %></td>
+    <td><%= link_to 'Destroy', tenant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

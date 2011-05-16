@@ -3,7 +3,7 @@
    <!-- Alternative Content Box Start -->
      <div class="contentcontainer">
         <div class="headings altheading">
-            <h2>Display Property</h2>
+            <h2>Displaying <%= @property.address1 %></h2>
         </div>
         <div class="contentbox">
         	<table width="100%">
@@ -60,25 +60,7 @@
                         <td><%= @property.property_id %></td>
 						<td><%= number_to_currency(@property.price) %></td>
 				</tbody>
-
-				<thead>
-					<% unless @property.description.empty? %>
-                	<tr>
-                    	<th>Description</th>
-						<th></th>
-						<th></th>
-						<th></th>
-						<th></th>												
-					</tr>
-					
-                </thead>
-
-				<tbody>
-                	<tr>
-                    	<td><%= @property.description %></td>
-					</tr>
-                </tbody>
-					<% end %>
+				
             </table>
 
 			<div class="bulkactions"> 
@@ -88,7 +70,14 @@
             
             <div style="clear: both;"></div>
         </div>
+</div>
+
+		<%= render :partial => "tenants_list", :locals => { :tenants => @property.tenants } %>
+
+		<%= render :partial => "new_tenant", :locals => { :tenant => Tenant.new(:property_id => @property.id) } %>
         
     </div>
+
+
   
 

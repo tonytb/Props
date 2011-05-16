@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  property_id: 1
+  first_name: MyString
+  last_name: MyString
+  email_address: MyString
+  contact_number: MyString
+  move_in_date: 2011-05-14 13:50:50
+  move_out_date: 2011-05-14 13:50:50
+  number_of_tenants: 1
+
+two:
+  property_id: 1
+  first_name: MyString
+  last_name: MyString
+  email_address: MyString
+  contact_number: MyString
+  move_in_date: 2011-05-14 13:50:50
+  move_out_date: 2011-05-14 13:50:50
+  number_of_tenants: 1

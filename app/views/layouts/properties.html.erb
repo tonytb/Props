@@ -14,7 +14,7 @@
 
 <body id="homepage">
 	<div id="header">
-    	<%= image_tag("../admin_images/cp_logo.png", :alt => "Control Panel") %>
+    	<%= link_to image_tag("../admin_images/cp_logo.png", :alt => "Control Panel"), index_path %>
     	<div id="searcharea">
             
             <input type="text" class="searchbox" value="Jump to property or tenant..." onclick="if (this.value =='Jump to property or tenant...'){this.value=''}"/>
@@ -40,7 +40,7 @@
         
         
      <%= yield %>
-        
+
        
         <div id="footer">
         	&copy; Copyright 2011 The Rent Book
@@ -68,8 +68,8 @@
         	<li>
                 <ul class="navigation">
                     <li class="heading selected">Current Section</li>
-                  <li><a href="#" title="">Section link here</a></li>
-                    <li><a href="#" title="">Section link here</a></li>
+                    <li><%= link_to "Create a new property", new_property_path %></li>
+                    <li><%= link_to "New Tenant", new_tenant_path %></li>
                     <li><a href="#" title="">Section link here</a></li>
                 </ul>
             </li>

@@ -705,3 +705,8 @@ div.border, div.colborder {
 .icon{
 	vertical-align:middle;
 }
+
+form.myform {
+    width: 100%;
+    
+}

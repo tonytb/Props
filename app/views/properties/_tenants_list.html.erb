@@ -1,0 +1,43 @@
+<br />
+<div class="contentcontainer">
+	<div class="headings altheading">
+    	<h2>All Tenants</h2><br />
+	</div>
+<div class="contentbox">
+	<table width="100%">
+    	<thead>
+        	<tr>
+            	<th>First Name</th>
+			    <th>Family Name</th>
+			    <th>Email address</th>
+			    <th>Contact number</th>
+				<th>Move in date</th>
+			    <th>Move out date</th>
+				<th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+				<% tenants.each do |tenant| %>
+				  <tr>
+				    <td><%= tenant.first_name %></td>
+				    <td><%= tenant.last_name %></td>
+				    <td><%= tenant.email_address %></td>
+					<td><%= tenant.contact_number %></td>
+					<td><%= tenant.move_in_date %></td>
+					<td><%= tenant.move_out_date %></td>
+				    <td><%= link_to 'Show', tenant %> | <%= link_to 'Edit', edit_tenant_path(tenant) %> |  <%= link_to 'Destroy', tenant, :confirm => 'Are you sure?', :method => :delete %></td>
+				  </tr>
+				<% end %>
+        </tbody>
+    </table>
+  <!-- <div class="extrabottom">
+        <div class="bulkactions"> 
+        	
+            	<%= link_to 'New Property', new_property_path %>
+        </div>
+    </div>
+    <div style="clear: both;"></div> -->
+    
+
+</div>
